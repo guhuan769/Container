@@ -15,6 +15,7 @@ namespace Company.UI.Controllers
         public ActionResult Index()
         {
             List<Staff> list = staffService.GetModels(p => true).ToList();
+            //staffService.GetModelsByPage<int>(1,1,true, p => p.Id, p=>true);
             return View(list);
         }
 
