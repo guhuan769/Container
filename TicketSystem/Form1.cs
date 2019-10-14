@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace TicketSystem
 {
-    public partial class Form1 : Form
+    public partial class frm_Main : Form
     {
-        public Form1()
+        public frm_Main()
         {
             InitializeComponent();
+        }
+
+        private void Btn_Serch_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
