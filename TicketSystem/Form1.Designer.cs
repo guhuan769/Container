@@ -34,15 +34,17 @@
             this.lb_EndSite = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.btn_Serch = new System.Windows.Forms.Button();
+            this.btn_Search = new System.Windows.Forms.Button();
             this.dtp_Time = new System.Windows.Forms.DateTimePicker();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dtp_Time);
-            this.groupBox1.Controls.Add(this.btn_Serch);
+            this.groupBox1.Controls.Add(this.btn_Search);
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.lb_EndSite);
@@ -110,15 +112,15 @@
             this.comboBox2.Size = new System.Drawing.Size(121, 23);
             this.comboBox2.TabIndex = 5;
             // 
-            // btn_Serch
+            // btn_Search
             // 
-            this.btn_Serch.Location = new System.Drawing.Point(655, 32);
-            this.btn_Serch.Name = "btn_Serch";
-            this.btn_Serch.Size = new System.Drawing.Size(75, 23);
-            this.btn_Serch.TabIndex = 7;
-            this.btn_Serch.Text = "查  询";
-            this.btn_Serch.UseVisualStyleBackColor = true;
-            this.btn_Serch.Click += new System.EventHandler(this.Btn_Serch_Click);
+            this.btn_Search.Location = new System.Drawing.Point(655, 32);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(75, 23);
+            this.btn_Search.TabIndex = 7;
+            this.btn_Search.Text = "查  询";
+            this.btn_Search.UseVisualStyleBackColor = true;
+            this.btn_Search.Click += new System.EventHandler(this.Btn_Serch_Click);
             // 
             // dtp_Time
             // 
@@ -128,16 +130,28 @@
             this.dtp_Time.Size = new System.Drawing.Size(200, 25);
             this.dtp_Time.TabIndex = 8;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(13, 101);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 27;
+            this.dataGridView1.Size = new System.Drawing.Size(750, 337);
+            this.dataGridView1.TabIndex = 1;
+            // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frm_Main";
             this.Text = "售票窗口";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -150,8 +164,9 @@
         private System.Windows.Forms.ComboBox cmb_StartSite;
         private System.Windows.Forms.Label lb_Address;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button btn_Serch;
+        private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.DateTimePicker dtp_Time;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
