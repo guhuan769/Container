@@ -31,6 +31,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MvcEfRedisMongdb", "MvcEfRe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Container", "Container", "{7DBB662D-45F0-4B62-B728-7C8C9312BAA0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TicketSystem", "TicketSystem", "{9D235DB5-AEB3-4858-A60C-92A1B1917E33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketSystem", "TicketSystem\TicketSystem.csproj", "{7AA16261-6604-47C1-8EB3-0988D5BE73E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,10 @@ Global
 		{57069CAC-0A24-45A8-9341-7E514CB6DCB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57069CAC-0A24-45A8-9341-7E514CB6DCB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57069CAC-0A24-45A8-9341-7E514CB6DCB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AA16261-6604-47C1-8EB3-0988D5BE73E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AA16261-6604-47C1-8EB3-0988D5BE73E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AA16261-6604-47C1-8EB3-0988D5BE73E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AA16261-6604-47C1-8EB3-0988D5BE73E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -86,6 +94,7 @@ Global
 		{39216FAF-2F69-4114-ACE8-88D562389735} = {FA55E278-0EA5-4446-8A70-94C9CF28BD20}
 		{AAFD4CBB-543B-47AB-9DCD-626D5595ABFB} = {E03EFA59-D7DE-46C5-A3E7-050FB675A582}
 		{57069CAC-0A24-45A8-9341-7E514CB6DCB5} = {0FE7557F-D8AF-499C-8DB8-033C1407C515}
+		{7AA16261-6604-47C1-8EB3-0988D5BE73E1} = {9D235DB5-AEB3-4858-A60C-92A1B1917E33}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FD72F2A1-3709-4966-B079-E17D2A6F1E70}
