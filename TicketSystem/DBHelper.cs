@@ -64,12 +64,31 @@ namespace TicketSystem
         public static DataRow GetDataRow(string sql, params SqlParameter[] paras)
         {
             DataTable dt = null;
-            using (SqlConnection conn = new SqlConnection)
+            using (SqlConnection conn = new SqlConnection(ConnStr))
             {
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddRange(paras);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                dt = new DataTable();
+                adapter.Fill(dt);
+            }
+            if (dt.Rows.Count > 0)
+                return dt.Rows[0];
+            else
+                return null;
+        }
 
+        public static DataSet GetDataSet(string sql, params SqlParameter[] paras)
+        {
+            DataSet ds = null;
+            using (SqlConnection conn = new SqlConnection(ConnStr))
+            {
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddRange(paras);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                ds = new DataSet();
+                adapter.Fill(ds);
+                return ds;
             }
         }
     }
