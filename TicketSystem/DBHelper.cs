@@ -11,7 +11,7 @@ namespace TicketSystem
     /// <summary>
     /// 数据库帮助类
     /// </summary>
-    public class DBHelper
+     class DBHelper
     {
         private static string ConnStr = "server=.;uid=sa;pwd=111111;database=TicketSystemDB";
 
@@ -61,7 +61,7 @@ namespace TicketSystem
             }
         }
 
-        public static DataRow GetDataRow(string sql, params SqlParameter[] paras)
+        public static DataTable GetDataRow(string sql, params SqlParameter[] paras)
         {
             DataTable dt = null;
             using (SqlConnection conn = new SqlConnection(ConnStr))
@@ -72,10 +72,13 @@ namespace TicketSystem
                 dt = new DataTable();
                 adapter.Fill(dt);
             }
-            if (dt.Rows.Count > 0)
-                return dt.Rows[0];
-            else
-                return null;
+            return dt;
+            //if (dt.Rows.Count > 0)
+            //{
+            //    return dt.Rows[0];
+            //}
+            //else
+            //    return null;
         }
 
         public static DataSet GetDataSet(string sql, params SqlParameter[] paras)

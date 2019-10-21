@@ -24,3 +24,16 @@ E:\Product\student\MyProject\Company.IDAL\obj\Debug\Company.IDAL.csproj.CoreComp
 E:\Product\student\MyProject\Company.IDAL\obj\Debug\Company.IDAL.csproj.CopyComplete
 E:\Product\student\MyProject\Company.IDAL\obj\Debug\Company.IDAL.dll
 E:\Product\student\MyProject\Company.IDAL\obj\Debug\Company.IDAL.pdb
+E:\Product\student\Container\Company.IDAL\bin\Debug\Company.IDAL.dll
+E:\Product\student\Container\Company.IDAL\bin\Debug\Company.IDAL.pdb
+E:\Product\student\Container\Company.IDAL\bin\Debug\Company.Model.dll
+E:\Product\student\Container\Company.IDAL\bin\Debug\EntityFramework.dll
+E:\Product\student\Container\Company.IDAL\bin\Debug\Company.Model.pdb
+E:\Product\student\Container\Company.IDAL\bin\Debug\Company.Model.dll.config
+E:\Product\student\Container\Company.IDAL\bin\Debug\EntityFramework.xml
+E:\Product\student\Container\Company.IDAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\Product\student\Container\Company.IDAL\obj\Debug\Company.IDAL.csprojAssemblyReference.cache
+E:\Product\student\Container\Company.IDAL\obj\Debug\Company.IDAL.csproj.CoreCompileInputs.cache
+E:\Product\student\Container\Company.IDAL\obj\Debug\Company.IDAL.csproj.CopyComplete
+E:\Product\student\Container\Company.IDAL\obj\Debug\Company.IDAL.dll
+E:\Product\student\Container\Company.IDAL\obj\Debug\Company.IDAL.pdb

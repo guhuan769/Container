@@ -29,16 +29,23 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lb_Address = new System.Windows.Forms.Label();
-            this.cmb_StartSite = new System.Windows.Forms.ComboBox();
-            this.lb_EndSite = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.btn_Search = new System.Windows.Forms.Button();
             this.dtp_Time = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btn_Search = new System.Windows.Forms.Button();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lb_EndSite = new System.Windows.Forms.Label();
+            this.cmb_StartSite = new System.Windows.Forms.ComboBox();
+            this.lb_Address = new System.Windows.Forms.Label();
+            this.dgv_TicketSearch = new System.Windows.Forms.DataGridView();
+            this.TrainId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrainNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RunTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StartStation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EndStation = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TicketNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_TicketSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -57,46 +64,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "条件筛选";
             // 
-            // lb_Address
+            // dtp_Time
             // 
-            this.lb_Address.AutoSize = true;
-            this.lb_Address.Location = new System.Drawing.Point(6, 36);
-            this.lb_Address.Name = "lb_Address";
-            this.lb_Address.Size = new System.Drawing.Size(60, 15);
-            this.lb_Address.TabIndex = 0;
-            this.lb_Address.Text = "出发地:";
+            this.dtp_Time.CustomFormat = "yyyy-MM-dd";
+            this.dtp_Time.Location = new System.Drawing.Point(446, 32);
+            this.dtp_Time.Name = "dtp_Time";
+            this.dtp_Time.Size = new System.Drawing.Size(200, 25);
+            this.dtp_Time.TabIndex = 8;
             // 
-            // cmb_StartSite
+            // btn_Search
             // 
-            this.cmb_StartSite.FormattingEnabled = true;
-            this.cmb_StartSite.Items.AddRange(new object[] {
-            "成都",
-            "上海",
-            "长沙",
-            "广东",
-            "北京"});
-            this.cmb_StartSite.Location = new System.Drawing.Point(67, 33);
-            this.cmb_StartSite.Name = "cmb_StartSite";
-            this.cmb_StartSite.Size = new System.Drawing.Size(121, 23);
-            this.cmb_StartSite.TabIndex = 1;
-            // 
-            // lb_EndSite
-            // 
-            this.lb_EndSite.AutoSize = true;
-            this.lb_EndSite.Location = new System.Drawing.Point(199, 36);
-            this.lb_EndSite.Name = "lb_EndSite";
-            this.lb_EndSite.Size = new System.Drawing.Size(55, 15);
-            this.lb_EndSite.TabIndex = 2;
-            this.lb_EndSite.Text = "label2";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(395, 36);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 15);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "日期:";
+            this.btn_Search.Location = new System.Drawing.Point(655, 32);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(75, 23);
+            this.btn_Search.TabIndex = 7;
+            this.btn_Search.Text = "查  询";
+            this.btn_Search.UseVisualStyleBackColor = true;
+            this.btn_Search.Click += new System.EventHandler(this.Btn_Serch_Click);
             // 
             // comboBox2
             // 
@@ -112,46 +96,136 @@
             this.comboBox2.Size = new System.Drawing.Size(121, 23);
             this.comboBox2.TabIndex = 5;
             // 
-            // btn_Search
+            // label3
             // 
-            this.btn_Search.Location = new System.Drawing.Point(655, 32);
-            this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(75, 23);
-            this.btn_Search.TabIndex = 7;
-            this.btn_Search.Text = "查  询";
-            this.btn_Search.UseVisualStyleBackColor = true;
-            this.btn_Search.Click += new System.EventHandler(this.Btn_Serch_Click);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(395, 36);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 15);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "日期:";
             // 
-            // dtp_Time
+            // lb_EndSite
             // 
-            this.dtp_Time.CustomFormat = "yyyy-MM-dd";
-            this.dtp_Time.Location = new System.Drawing.Point(446, 32);
-            this.dtp_Time.Name = "dtp_Time";
-            this.dtp_Time.Size = new System.Drawing.Size(200, 25);
-            this.dtp_Time.TabIndex = 8;
+            this.lb_EndSite.AutoSize = true;
+            this.lb_EndSite.Location = new System.Drawing.Point(199, 36);
+            this.lb_EndSite.Name = "lb_EndSite";
+            this.lb_EndSite.Size = new System.Drawing.Size(55, 15);
+            this.lb_EndSite.TabIndex = 2;
+            this.lb_EndSite.Text = "label2";
             // 
-            // dataGridView1
+            // cmb_StartSite
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 101);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(750, 337);
-            this.dataGridView1.TabIndex = 1;
+            this.cmb_StartSite.FormattingEnabled = true;
+            this.cmb_StartSite.Items.AddRange(new object[] {
+            "成都",
+            "上海",
+            "长沙",
+            "广东",
+            "北京"});
+            this.cmb_StartSite.Location = new System.Drawing.Point(67, 33);
+            this.cmb_StartSite.Name = "cmb_StartSite";
+            this.cmb_StartSite.Size = new System.Drawing.Size(121, 23);
+            this.cmb_StartSite.TabIndex = 1;
+            // 
+            // lb_Address
+            // 
+            this.lb_Address.AutoSize = true;
+            this.lb_Address.Location = new System.Drawing.Point(6, 36);
+            this.lb_Address.Name = "lb_Address";
+            this.lb_Address.Size = new System.Drawing.Size(60, 15);
+            this.lb_Address.TabIndex = 0;
+            this.lb_Address.Text = "出发地:";
+            // 
+            // dgv_TicketSearch
+            // 
+            this.dgv_TicketSearch.AllowUserToAddRows = false;
+            this.dgv_TicketSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_TicketSearch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TrainId,
+            this.TrainNo,
+            this.RunTime,
+            this.StartStation,
+            this.EndStation,
+            this.Price,
+            this.TicketNum});
+            this.dgv_TicketSearch.Location = new System.Drawing.Point(13, 101);
+            this.dgv_TicketSearch.Name = "dgv_TicketSearch";
+            this.dgv_TicketSearch.RowHeadersWidth = 51;
+            this.dgv_TicketSearch.RowTemplate.Height = 27;
+            this.dgv_TicketSearch.Size = new System.Drawing.Size(750, 337);
+            this.dgv_TicketSearch.TabIndex = 1;
+            // 
+            // TrainId
+            // 
+            this.TrainId.DataPropertyName = "TrainId";
+            this.TrainId.HeaderText = "编号";
+            this.TrainId.MinimumWidth = 6;
+            this.TrainId.Name = "TrainId";
+            this.TrainId.ReadOnly = true;
+            this.TrainId.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.TrainId.Width = 125;
+            // 
+            // TrainNo
+            // 
+            this.TrainNo.DataPropertyName = "TrainNo";
+            this.TrainNo.HeaderText = "车次";
+            this.TrainNo.MinimumWidth = 6;
+            this.TrainNo.Name = "TrainNo";
+            this.TrainNo.Width = 125;
+            // 
+            // RunTime
+            // 
+            this.RunTime.DataPropertyName = "RunTime";
+            this.RunTime.HeaderText = "发车时间";
+            this.RunTime.MinimumWidth = 6;
+            this.RunTime.Name = "RunTime";
+            this.RunTime.Width = 125;
+            // 
+            // StartStation
+            // 
+            this.StartStation.DataPropertyName = "StartStation";
+            this.StartStation.HeaderText = "出发地";
+            this.StartStation.MinimumWidth = 6;
+            this.StartStation.Name = "StartStation";
+            this.StartStation.Width = 125;
+            // 
+            // EndStation
+            // 
+            this.EndStation.DataPropertyName = "EndStation";
+            this.EndStation.HeaderText = "目的地";
+            this.EndStation.MinimumWidth = 6;
+            this.EndStation.Name = "EndStation";
+            this.EndStation.Width = 125;
+            // 
+            // Price
+            // 
+            this.Price.DataPropertyName = "Price";
+            this.Price.HeaderText = "金额";
+            this.Price.MinimumWidth = 6;
+            this.Price.Name = "Price";
+            this.Price.Width = 125;
+            // 
+            // TicketNum
+            // 
+            this.TicketNum.DataPropertyName = "TicketNum";
+            this.TicketNum.HeaderText = "剩余票数";
+            this.TicketNum.MinimumWidth = 6;
+            this.TicketNum.Name = "TicketNum";
+            this.TicketNum.Width = 125;
             // 
             // frm_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_TicketSearch);
             this.Controls.Add(this.groupBox1);
             this.Name = "frm_Main";
             this.Text = "售票窗口";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_TicketSearch)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -166,7 +240,14 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.DateTimePicker dtp_Time;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_TicketSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TrainId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TrainNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RunTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StartStation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EndStation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TicketNum;
     }
 }
 

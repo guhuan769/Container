@@ -1,0 +1,10 @@
+E:\Product\student\Container\TicketSystem\bin\Debug\TicketSystem.exe.config
+E:\Product\student\Container\TicketSystem\bin\Debug\TicketSystem.exe
+E:\Product\student\Container\TicketSystem\bin\Debug\TicketSystem.pdb
+E:\Product\student\Container\TicketSystem\obj\Debug\TicketSystem.csprojAssemblyReference.cache
+E:\Product\student\Container\TicketSystem\obj\Debug\TicketSystem.frm_Main.resources
+E:\Product\student\Container\TicketSystem\obj\Debug\TicketSystem.Properties.Resources.resources
+E:\Product\student\Container\TicketSystem\obj\Debug\TicketSystem.csproj.GenerateResource.cache
+E:\Product\student\Container\TicketSystem\obj\Debug\TicketSystem.csproj.CoreCompileInputs.cache
+E:\Product\student\Container\TicketSystem\obj\Debug\TicketSystem.exe
+E:\Product\student\Container\TicketSystem\obj\Debug\TicketSystem.pdb

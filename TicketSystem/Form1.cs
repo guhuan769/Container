@@ -14,12 +14,15 @@ namespace TicketSystem
     {
         public frm_Main()
         {
+            
             InitializeComponent();
         }
 
         private void Btn_Serch_Click(object sender, EventArgs e)
         {
+            string sql = " select TrainId, TrainNo, RunTime, StartStation, EndStation, Price, TicketNum from Ticket ";
 
+            this.dgv_TicketSearch.DataSource = DBHelper.GetDataRow(sql);
         }
     }
 }
